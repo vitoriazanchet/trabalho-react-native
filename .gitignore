@@ -41,6 +41,9 @@ yarn-error.*
 /android
 
 #Claude
-.claude
+.claude/
 AGENTS.md
 CLAUDE.md
+
+#Ignorar configurações locais do VS Code
+.vscode/

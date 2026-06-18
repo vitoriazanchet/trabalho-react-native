@@ -1,9 +1,9 @@
 # Book & Brew
 
 <p align="center">
-    <img src="https://github.com/vitoriazanchet/trabalho-react-native/blob/main/cafeteria/assets/icons/cafe.png" alt="café" height="35px" />
-    <img src="https://github.com/vitoriazanchet/trabalho-react-native/blob/main/cafeteria/assets/icons/gatinho3.png" alt="gato" height="35px" />
-    <img src="https://github.com/vitoriazanchet/trabalho-react-native/blob/main/cafeteria/assets/icons/livro fechado.png" alt="livro" height="35px" />
+    <img src="https://github.com/vitoriazanchet/trabalho-react-native/blob/main/assets/icons/cafe.png" alt="café" height="35px" />
+    <img src="https://github.com/vitoriazanchet/trabalho-react-native/blob/main/assets/icons/gatinho3.png" alt="gato" height="35px" />
+    <img src="https://github.com/vitoriazanchet/trabalho-react-native/blob/main/assets/icons/livro fechado.png" alt="livro" height="35px" />
 </p>
 
 Aplicativo mobile de uma cafeteria temática (livros, café e gatos), desenvolvido em React Native com Expo Router como trabalho da disciplina de Desenvolvimento de Aplicações Multiplataformas (Serratec).
