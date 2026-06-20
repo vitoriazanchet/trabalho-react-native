@@ -38,7 +38,7 @@ export const styles = StyleSheet.create({
     overflow: 'hidden',
   },
 
-  imgLeft: {
+  fachada: {
     flex: 1,
     height: 240,
     borderBottomLeftRadius: 18,
@@ -66,75 +66,11 @@ export const styles = StyleSheet.create({
     color: CORES.primaria,
   },
 
-  titulo: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 13,
-    marginBottom: 10,
-  },
-
-  imgTitulo: {
-    width: 20,
-    height: 20,
-  },
-
-  h1: {
-    fontFamily: FONTES.titulo.bold,
-    fontSize: 28,
-  },
-
-  h2: {
-    fontFamily: FONTES.titulo.bold,
-    fontSize: 21,
-    marginTop: 5,
-  },
-
-  h3: {
-    fontFamily: FONTES.corpo.bold,
-    fontSize: 18,
-  },
-
-  text: {
-    flexDirection: 'column',
-    padding: 32,
-  },
-
   p: {
     fontFamily: FONTES.corpo.regular,
     marginTop: 10,
     fontSize: 14,
     color: CORES.texto,
-  },
-
-  text2: {
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: 16,
-    width: 203,
-  },
-
-  card: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: CORES.primaria,
-    borderWidth: 1,
-    borderColor: CORES.terceariaLight,
-    borderRadius: 18,
-    flex: 1,
-    height: 160,
-  },
-
-  imgCard: {
-    width: 48,
-    height: 48,
-    marginLeft: 16,
-  },
-
-  card2: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    flex: 1,
-    height: 80,
   },
 
   metricas: {
@@ -147,7 +83,7 @@ export const styles = StyleSheet.create({
     padding: 16,
   },
 
-  imgRight: {
+  imgAvaliacao: {
     flex: 1,
     height: 420,
     borderTopLeftRadius: 18,

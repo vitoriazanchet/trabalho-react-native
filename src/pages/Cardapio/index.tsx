@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import Salgados from './Salgados';
 import Doces from './Doces';
-import Bebida from './Bebidas';
+import Bebidas from './Bebidas';
 import { styles, CORES_CATEGORIA } from "./styles";
 
 const Tab = createBottomTabNavigator();
@@ -43,7 +43,7 @@ export default function Cardapio() {
             tabBarInactiveTintColor: CORES_CATEGORIA.doces.textoInativo,
             tabBarInactiveBackgroundColor: CORES_CATEGORIA.doces.bgInativo, }}
             />
-          <Tab.Screen name="Bebida" component={Bebida} options={{ title: 'Poções dos gatos', 
+          <Tab.Screen name="Bebidas" component={Bebidas} options={{ title: 'Poções dos gatos', 
             tabBarActiveTintColor: CORES_CATEGORIA.bebidas.texto, 
             tabBarActiveBackgroundColor: CORES_CATEGORIA.bebidas.bg,
             tabBarInactiveTintColor: CORES_CATEGORIA.bebidas.textoInativo,
