@@ -106,11 +106,11 @@ assets/
 
 | Nome | Responsabilidade | GitHub | LinkedIn |
 |---|---|---|---|
-| **Adriane** |  Página cardápio | [GitHub](https://github.com/AdrianeTranhaqui) | [LinkedIn](https://www.linkedin.com/in/adriane-tranhaqui-356806353/) |
-| **Ana Luísa** | Página home | [GitHub](https://github.com/devAnaLuX) | [LinkedIn](https://www.linkedin.com/in/ana-luisa-cunha-reis-8baa563a3/) |
-| **Melissa** | Página itens selecionados | [GitHub](https://github.com/melissa-lima21) | [LinkedIn](https://www.linkedin.com/in/melissa-lima-0628a324b/) |
-| **Raquel** | Página biblioteca do gato  | [GitHub](https://github.com/Raquel-Beep) | [LinkedIn](https://www.linkedin.com/in/raquel-taveira-02668423b/) |
-| **Vitória** | Iniciação do projeto, criação dos componentes gerais, página nosso refugio, conexão com MockAPI | [GitHub](https://github.com/vitoriazanchet) | [LinkedIn](https://www.linkedin.com/in/vitoria-zanchet) |
+| **Adriane** |  Página cardápio, bebidas, doces e salgados | [GitHub](https://github.com/AdrianeTranhaqui) | [LinkedIn](https://www.linkedin.com/in/adriane-tranhaqui-356806353/) |
+| **Ana Luísa** | Página home, POST com MockAPI | [GitHub](https://github.com/devAnaLuX) | [LinkedIn](https://www.linkedin.com/in/ana-luisa-cunha-reis-8baa563a3/) |
+| **Melissa** | Página itens selecionados, Contexto, Asyncstorage | [GitHub](https://github.com/melissa-lima21) | [LinkedIn](https://www.linkedin.com/in/melissa-lima-0628a324b/) |
+| **Raquel** | Página biblioteca do gato, conexão com API pública | [GitHub](https://github.com/Raquel-Beep) | [LinkedIn](https://www.linkedin.com/in/raquel-taveira-02668423b/) |
+| **Vitória** | Página nosso refugio, navegações, componentes básicos, POST com MockAPI | [GitHub](https://github.com/vitoriazanchet) | [LinkedIn](https://www.linkedin.com/in/vitoria-zanchet) |
 
 ---
 
