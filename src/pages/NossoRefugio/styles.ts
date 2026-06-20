@@ -98,13 +98,6 @@ export const styles = StyleSheet.create({
     height: 420,
   },
 
-  avaliacaoH2: {
-    fontFamily: FONTES.titulo.bold,
-    color: CORES.terceariaLight,
-    fontSize: 21,
-    marginTop: 5,
-  },
-
   avaliacaoH3: {
     fontFamily: FONTES.corpo.bold,
     color: CORES.terceariaLight,

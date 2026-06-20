@@ -1,4 +1,5 @@
 import { View, Text, Image, ImageBackground, ScrollView } from "react-native";
+import { CORES } from "../../styles/theme";
 import { styles } from "./styles";
 import Titulo from "../../componentes/Titulo";
 import Card from "../../componentes/Card";
@@ -67,7 +68,7 @@ export default function NossoRefugio() {
       <View style={styles.tercearia}>
         <ImageBackground source={espaco5} style={styles.imgAvaliacao} resizeMode="cover" >
           <View style={styles.avaliacao}>
-            <Titulo texto="Avalie nosso atendimento" variante="secao" />
+            <Titulo texto="Avalie nosso atendimento" variante="secao" estiloTexto={{ color: CORES.terceariaLight }}/>
             <FormularioAvaliacao />
           </View>
         </ImageBackground>

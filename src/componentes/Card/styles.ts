@@ -33,16 +33,30 @@ export const styles = StyleSheet.create({
     width: 203,
   },
 
-  h3: {
+  titulo: {
     fontFamily: FONTES.corpo.bold,
+    color: CORES.texto,
     fontSize: 18,
   },
 
-  p: {
+  titulo2: {
+    fontFamily: FONTES.corpo.bold,
+    color: CORES.primaria,
+    fontSize: 18,
+  },
+
+  corpo: {
     fontFamily: FONTES.corpo.regular,
     marginTop: 10,
     fontSize: 14,
     color: CORES.texto,
+  },
+
+  corpo2: {
+    fontFamily: FONTES.corpo.regular,
+    marginTop: 10,
+    fontSize: 14,
+    color: CORES.primaria,
   },
 
   imgCard: {
