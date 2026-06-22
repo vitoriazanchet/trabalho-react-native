@@ -13,13 +13,20 @@ import { useRouter } from 'expo-router';
 import axios from 'axios';
 import { LinearGradient } from 'expo-linear-gradient';
 
+interface Avaliacao {
+  id: string; 
+  nome: string;
+  comentario: string;
+  avatar?: string; 
+}
+
 export default function Home() {
   const router = useRouter();
   const [cafeEstendido, setCafeEstendido] = useState(false);
   const [sobremesaEstendido, setSobremesaEstendido] = useState(false);
   const [salgadoEstendido, setSalgadoEstendido] = useState(false);
   const [livrosEstendido, setLivrosEstendido] = useState(false);
-  const [avaliacoes, setAvaliacoes] = useState([]);
+  const [avaliacoes, setAvaliacoes] = useState<Avaliacao[]>([]);
   const [carregando, setCarregando] = useState(true);
   const [erro, setErro] = useState<string | null>(null);
   const [comentarioAtual, setComentarioAtual] = useState(0);
