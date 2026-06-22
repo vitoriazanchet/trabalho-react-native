@@ -1,138 +1,297 @@
-import { StyleSheet } from "react-native";
-import { FONTES, MEDIDAS } from "../../styles/theme";
+import { StyleSheet } from 'react-native';
 
-const CORES_CATEGORIA = {
-  salgados: {
-    bg: 'rgba(204, 211, 159, 0.55)',
-    texto: 'rgb(122, 133, 100)',
-    bgInativo: 'rgba(204, 211, 159, 0.2)',
-    textoInativo: 'rgba(122, 133, 100, 0.6)',
-  },
-  doces: {
-    bg: 'rgba(206, 163, 135, 0.55)',
-    texto: 'rgb(143, 118, 102)',
-    bgInativo: 'rgba(206, 163, 135, 0.2)',
-    textoInativo: 'rgba(143, 118, 102, 0.6)',
-  },
-  bebidas: {
-    bg: 'rgba(190, 131, 82, 0.49)',
-    texto: 'rgb(141, 111, 87)',
-    bgInativo: 'rgba(190, 131, 82, 0.2)',
-    textoInativo: 'rgba(141, 111, 87, 0.6)',
-  },
+
+const CORES = {
+  branco: '#FFFFFF',
+  creme: '#FDFBF7',
+  cremeEscuro: '#EFECE6',
+  texto: '#4A3E3D',
+  textoSuave: '#726B62',
+  marrom: '#8B5A2B',
+  verdeMusgo: '#4E573C',
+  verdeClaro: '#697453',
+  divisorColor: '#CAC5B7',
 };
 
-export { CORES_CATEGORIA };
+const RADIUS = {
+  md: 12,
+  lg: 20,
+};
 
-export const styles = StyleSheet.create({
-  telaCheia: {
+const styles = StyleSheet.create({
+  pagina: {
     flex: 1,
-    //estilo aletório apenas para visualizar a navegação das páginas internas:
-    backgroundColor: 'rgb(241, 237, 221)',
-    fontFamily: FONTES.corpo.regular,
-    fontStyle: 'italic',
-    color: 'rgb(133, 117, 94)',
-  },
-
-  cardapio: {
-    flexDirection: 'column',
-    alignItems: 'center',
-    paddingVertical: 48,
+    backgroundColor: CORES.creme,
     paddingHorizontal: 16,
+    paddingTop: 24,
   },
-
+  cardapioHeader: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 16,
+    width: '100%',
+  },
+  gatoTitulo: {
+    width: 80,
+    height: 80,
+    resizeMode: 'contain',
+    marginBottom: 8,
+  },
+  tituloContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 4,
+  },
+  folha: {
+    width: 40,
+    height: 40,
+    resizeMode: 'contain',
+  },
   titulo: {
-    fontFamily: FONTES.titulo.bold,
-    fontSize: 59,
-    color: 'rgb(94, 104, 73)',
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: CORES.verdeMusgo,
     textAlign: 'center',
-    marginBottom: 2,
-    letterSpacing: 1.5,
+    marginHorizontal: 8,
   },
-
   frase: {
-    fontFamily: FONTES.corpo.regular,
     fontStyle: 'italic',
-    color: 'rgb(133, 117, 94)',
-    letterSpacing: 1.6,
+    color: CORES.textoSuave,
+    textAlign: 'center',
+    letterSpacing: 0.5,
+    paddingHorizontal: 20,
+    marginTop: 4,
   },
-
-  tabsContainer: {
-    flex: 1,
+  cardsContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    width: '100%',
+    marginTop: 16,
+    gap: 12,
   },
-
-  tabBar: {
-    backgroundColor: 'rgb(241, 237, 221)',
-    height: 64,
-    borderTopWidth: 0,
-    elevation: 8,
+  card1: {
+    backgroundColor: 'rgba(164, 168, 134, 0.45)',
+    borderRadius: 15,
+    paddingVertical: 14,
+    paddingHorizontal: 20,
+    marginBottom: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
   },
-  tabBarLabel: {
-    fontFamily: FONTES.corpo.regular,
-    fontSize: 12.2,
+  card2: {
+    backgroundColor: 'rgba(177, 143, 121, 0.45)',
+    borderRadius: 15,
+    paddingVertical: 14,
+    paddingHorizontal: 20,
+    marginBottom: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+  },
+  card3: {
+    backgroundColor: 'rgba(206, 175, 116, 0.4)',
+    borderRadius: 15,
+    paddingVertical: 14,
+    paddingHorizontal: 20,
+    marginBottom: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+  },
+  iconeCard: {
+    width: 22,
+    height: 22,
+    marginRight: 10,
+    resizeMode: 'contain',
+  },
+  txt1: {
+    color: '#333333',
+    fontSize: 16,
     fontWeight: '600',
   },
-
-  card1: {
-    backgroundColor: CORES_CATEGORIA.salgados.bg,
-    borderRadius: MEDIDAS.radiusM,
-    padding: 24,
-    flex: 1,
-    minWidth: 250,
-    maxWidth: 350,
-    elevation: 3,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.06,
-    shadowRadius: 8,
-  },
-
-  card2: {
-    backgroundColor: CORES_CATEGORIA.doces.bg,
-    borderRadius: MEDIDAS.radiusM,
-    padding: 24,
-    flex: 1,
-    minWidth: 250,
-    maxWidth: 350,
-    elevation: 3,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.06,
-    shadowRadius: 8,
-  },
-
-  card3: {
-    backgroundColor: CORES_CATEGORIA.bebidas.bg,
-    borderRadius: MEDIDAS.radiusM,
-    padding: 24,
-    flex: 1,
-    minWidth: 250,
-    maxWidth: 350,
-    elevation: 3,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.06,
-    shadowRadius: 8,
-  },
-
-  txt1: {
-    fontFamily: FONTES.titulo.bold,
-    fontSize: 24,
-    color: CORES_CATEGORIA.salgados.texto,
-    textAlign: 'right',
-  },
-
   txt2: {
-    fontFamily: FONTES.titulo.bold,
-    fontSize: 24,
-    color: CORES_CATEGORIA.doces.texto,
-    textAlign: 'right',
+    color: '#333333',
+    fontSize: 16,
+    fontWeight: '600',
   },
-
   txt3: {
-    fontFamily: FONTES.titulo.bold,
-    fontSize: 24,
-    color: CORES_CATEGORIA.bebidas.texto,
-    textAlign: 'right',
+    color: '#333333',
+    fontSize: 16,
+    fontWeight: '600',
   },
-})
+  divisor: {
+    borderTopWidth: 1,
+    borderTopColor: CORES.divisorColor,
+    width: '100%',
+    marginVertical: 24,
+  },
+  secaoHeader: {
+    width: '100%',
+    marginTop: 8,
+    marginBottom: 12,
+    paddingHorizontal: 4,
+  },
+  secaoTitulo: {
+    flexDirection: 'column',
+  },
+  iconeSecao: {
+    width: 24,
+    height: 24,
+    resizeMode: 'contain',
+    opacity: 0.6,
+  },
+  secaoNome: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: CORES.verdeClaro,
+    textTransform: 'uppercase',
+    letterSpacing: 1,
+  },
+  secaoDescricao: {
+    fontSize: 14,
+    color: CORES.textoSuave,
+    marginTop: 4,
+  },
+  listaItens: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    width: '100%',
+  },
+  cardItem: {
+    backgroundColor: CORES.branco,
+    borderRadius: RADIUS.md,
+    overflow: 'hidden',
+    width: '48%',
+    marginBottom: 16,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.06,
+    shadowRadius: 3,
+    elevation: 2,
+    opacity: 0.95,
+  },
+  cardImg: {
+    width: '100%',
+    height: 120,
+  },
+  cardInfo: {
+    padding: 10,
+    gap: 4,
+  },
+  cardNome: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: CORES.texto,
+  },
+  cardDescricao: {
+    fontSize: 11,
+    color: CORES.textoSuave,
+    lineHeight: 14,
+  },
+  cardPreco: {
+    fontSize: 13,
+    fontWeight: 'bold',
+    color: CORES.marrom,
+    marginTop: 2,
+  },
+  cardTag: {
+    fontSize: 10,
+    color: CORES.verdeClaro,
+    borderWidth: 1,
+    borderColor: 'rgba(105, 116, 83, 0.3)',
+    borderRadius: 12,
+    paddingVertical: 2,
+    paddingHorizontal: 6,
+    alignSelf: 'flex-start',
+    marginTop: 4,
+  },
+  gatinhoFinal: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 32,
+    marginBottom: 16,
+  },
+  gatinhoImg: {
+    width: 120,
+    height: 120,
+    resizeMode: 'contain',
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modal: {
+    backgroundColor: CORES.creme,
+    borderRadius: RADIUS.lg,
+    overflow: 'hidden',
+    width: '85%',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 8,
+    elevation: 5,
+  },
+  modalImg: {
+    width: '100%',
+    height: 180,
+  },
+  modalInfo: {
+    padding: 20,
+    gap: 8,
+  },
+  modalNome: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: CORES.texto,
+  },
+  modalPreco: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: CORES.marrom,
+  },
+  modalPergunta: {
+    fontSize: 14,
+    color: CORES.textoSuave,
+    marginTop: 4,
+  },
+  modalBotoes: {
+    flexDirection: 'row',
+    gap: 12,
+    marginTop: 16,
+  },
+  btnCancelar: {
+    flex: 1,
+    padding: 12,
+    borderWidth: 1.5,
+    borderColor: CORES.cremeEscuro,
+    borderRadius: RADIUS.md,
+    alignItems: 'center',
+  },
+  btnTextCancelar: {
+    fontSize: 14,
+    color: CORES.textoSuave,
+    fontWeight: '600',
+  },
+  btnConfirmar: {
+    flex: 1,
+    padding: 12,
+    backgroundColor: CORES.verdeMusgo,
+    borderRadius: RADIUS.md,
+    alignItems: 'center',
+  },
+  btnTextConfirmar: {
+    fontSize: 14,
+    color: CORES.branco,
+    fontWeight: '700',
+  },
+});
+export default styles;
