@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ScrollView, View, Text, Image, TouchableOpacity, Modal } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { styles } from "./styles";
+import { useSelecao } from '../../context/ContextSelecao'; //*
 
 // Seus imports de imagens originais
 import cafeChocolate from '../../../assets/images/cardapio/bebidas/cafe-com-chocolate.png';
@@ -19,6 +19,7 @@ interface Produto {
 }
 
 export default function Bebidas() {
+  const { adicionarItem } = useSelecao(); //*
   const [modalAberto, setModalAberto] = useState(false);
   const [itemSelecionado, setItemSelecionado] = useState<Produto | null>(null);
 
@@ -40,19 +41,15 @@ export default function Bebidas() {
     setItemSelecionado(null);
   }
 
-  async function confirmarSelecao() {
+  async function confirmarSelecao() { //*
     if (!itemSelecionado) return;
     try {
-      const itensSalvosRaw = await AsyncStorage.getItem('itensSelecionados');
-      const itensSalvos = itensSalvosRaw ? JSON.parse(itensSalvosRaw) : [];
-      
-      itensSalvos.push({
+      await adicionarItem({
         nome: itemSelecionado.nome,
         preco: itemSelecionado.preco,
-        imagem: itemSelecionado.img
+        imagem: itemSelecionado.img,
+        tipo: 'comida',
       });
-      
-      await AsyncStorage.setItem('itensSelecionados', JSON.stringify(itensSalvos));
       fecharModal();
     } catch (error) {
       console.log("Erro ao salvar item");
