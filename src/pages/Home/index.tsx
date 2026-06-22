@@ -13,7 +13,7 @@ import { useRouter } from 'expo-router';
 import axios from 'axios';
 import { LinearGradient } from 'expo-linear-gradient';
 
-type Avaliacao ={
+interface Avaliacao {
   id: string; 
   nome: string;
   comentario: string;
