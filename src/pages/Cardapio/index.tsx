@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View, Text, Image } from "react-native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -29,21 +29,20 @@ export default function Cardapio() {
         <Text style={styles.frase}>Sabores que inspiram, aconchegam e despertam histórias.</Text>
       </View>
 
-      {/* Container das Abas */}
       <View style={styles.tabsContainer}>
         <Tab.Navigator
           screenOptions={({ route }) => ({
             headerShown: false,
             tabBarStyle: styles.tabBar,
             tabBarLabelStyle: styles.tabBarLabel,
-            tabBarItemStyle: { padding: 0, margin: 0 },
-            tabBarIcon: ({ color }) => {
+            tabBarLabelPosition: 'beside-icon',
+            tabBarIcon: ({ color, size }) => {
               const icones: Record<string, keyof typeof Ionicons.glyphMap> = {
                 Salgados: 'restaurant-outline',
                 Doces: 'ice-cream-outline',
                 Bebidas: 'cafe-outline',
               };
-              return <Ionicons name={icones[route.name]} size={22} color={color} />;
+              return <Ionicons name={icones[route.name]} size={size} color={color} />;
             },
           })}
         >
@@ -51,68 +50,34 @@ export default function Cardapio() {
             name="Salgados" 
             component={Salgados} 
             options={{ 
-              title: 'Salgados',
+              title: 'Salgados', 
               tabBarActiveTintColor: CORES_CARDAPIO.salgados.texto, 
+              tabBarActiveBackgroundColor: CORES_CARDAPIO.salgados.bg,
               tabBarInactiveTintColor: CORES_CARDAPIO.salgados.textoInativo,
-              // Desestruturamos apenas as propriedades seguras e necessárias para o TypeScript
-              tabBarButton: ({ onPress, accessibilityState, children }) => (
-                <TouchableOpacity
-                  onPress={onPress}
-                  accessibilityState={accessibilityState}
-                  activeOpacity={1}
-                  style={[
-                    styles.tabBarItemCustom,
-                    accessibilityState?.selected ? { backgroundColor: CORES_CARDAPIO.salgados.bg } : null
-                  ]}
-                >
-                  {children}
-                </TouchableOpacity>
-              )
+              tabBarInactiveBackgroundColor: CORES_CARDAPIO.salgados.bgInativo, 
             }} 
           />
           <Tab.Screen 
             name="Doces" 
             component={Doces} 
             options={{ 
-              title: 'Doces',
+              title: 'Doces', 
               tabBarActiveTintColor: CORES_CARDAPIO.doces.texto, 
+              tabBarActiveBackgroundColor: CORES_CARDAPIO.doces.bg,
               tabBarInactiveTintColor: CORES_CARDAPIO.doces.textoInativo,
-              tabBarButton: ({ onPress, accessibilityState, children }) => (
-                <TouchableOpacity
-                  onPress={onPress}
-                  accessibilityState={accessibilityState}
-                  activeOpacity={1}
-                  style={[
-                    styles.tabBarItemCustom,
-                    accessibilityState?.selected ? { backgroundColor: CORES_CARDAPIO.doces.bg } : null
-                  ]}
-                >
-                  {children}
-                </TouchableOpacity>
-              )
-            }} 
+              tabBarInactiveBackgroundColor: CORES_CARDAPIO.doces.bgInativo, 
+            }}
           />
           <Tab.Screen 
             name="Bebidas" 
             component={Bebidas} 
             options={{ 
-              title: 'Bebidas',
+              title: 'Bebidas', 
               tabBarActiveTintColor: CORES_CARDAPIO.bebidas.texto, 
+              tabBarActiveBackgroundColor: CORES_CARDAPIO.bebidas.bg,
               tabBarInactiveTintColor: CORES_CARDAPIO.bebidas.textoInativo,
-              tabBarButton: ({ onPress, accessibilityState, children }) => (
-                <TouchableOpacity
-                  onPress={onPress}
-                  accessibilityState={accessibilityState}
-                  activeOpacity={1}
-                  style={[
-                    styles.tabBarItemCustom,
-                    accessibilityState?.selected ? { backgroundColor: CORES_CARDAPIO.bebidas.bg } : null
-                  ]}
-                >
-                  {children}
-                </TouchableOpacity>
-              )
-            }} 
+              tabBarInactiveBackgroundColor: CORES_CARDAPIO.bebidas.bgInativo, 
+            }}
           />
         </Tab.Navigator>
       </View>

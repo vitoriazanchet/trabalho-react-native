@@ -63,7 +63,6 @@ export const styles = StyleSheet.create({
   },
   frase: {
     fontFamily: FONTES.corpo.regular,
-    fontSize: 13,
     fontStyle: 'italic',
     color: 'rgb(83, 75, 63)',
     textAlign: 'center',
@@ -76,34 +75,18 @@ export const styles = StyleSheet.create({
     marginTop: 8,
   },
 
-  // --- Correção Crítica do Menu Inferior (Tabs) ---
   tabBar: {
-    backgroundColor: 'rgb(253, 252, 248)',
-    height: 74, 
-    borderTopWidth: 1,
-    borderTopColor: 'rgb(240, 238, 228)',
-    elevation: 0,
-    shadowOpacity: 0,
-    paddingBottom: 0,
+    backgroundColor: 'rgb(241, 237, 221)',
+    height: 64,
+    borderTopWidth: 0,
+    elevation: 8,
   },
-
-  // Esta nova classe vai forçar cada aba a se esticar até colar nas bordas vizinhas
-  tabBarItemCustom: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100%',
-    width: '100%',
-  },
-
   tabBarLabel: {
     fontFamily: FONTES.corpo.regular,
-    fontSize: 12,
+    fontSize: 12.2,
     fontWeight: '600',
-    marginTop: 4,
-    marginBottom: 0,
   },
-
+  
   // --- Sistema de Grid para os Cards ---
   listaItensGrid: {
     flexDirection: 'row',
