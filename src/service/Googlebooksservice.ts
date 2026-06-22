@@ -79,7 +79,7 @@ export async function buscarLivrosPorAssunto(
 
 export async function buscarLivroDoMes(): Promise<Book | null> {
   try {
-    const query = encodeURIComponent('intitle:Crescent City inauthor:Sarah J. Maas');
+   const query = encodeURIComponent('intitle:House of Earth and Blood inauthor:Sarah J. Maas');
     const url = `${GOOGLE_BOOKS_API}?q=${query}&orderBy=relevance&maxResults=1&key=${API_KEY}`;
 
     const resposta = await fetch(url);
