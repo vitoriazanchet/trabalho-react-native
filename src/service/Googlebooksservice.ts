@@ -28,7 +28,7 @@ interface GoogleBooksResponse {
 }
 
 const GOOGLE_BOOKS_API = 'https://www.googleapis.com/books/v1/volumes';
-const API_KEY = 'SUA_CHAVE_AQUI';
+const API_KEY = 'AIzaSyAj_KXBTsSfsBBhSlFs7GhFwxt_63kJRY8';
 
 const LIVRO_DO_MES_FALLBACK: Book = {
   id: 'crescent-city-fallback',
