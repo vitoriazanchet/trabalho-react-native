@@ -7,6 +7,7 @@ import {
   ActivityIndicator,
 } from 'react-native';
 
+
 import { styles } from '../../pages/BibliotecaDoGato/styles';
 import { buscarLivroDoMes, Book } from '../../service/Googlebooksservice';
 

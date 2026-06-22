@@ -406,4 +406,23 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     paddingVertical: 16,
   },
+  botaoAdicionar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 4,
+    backgroundColor: '#6F816A',
+    borderRadius: 999,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    marginTop: 6,
+  },
+  botaoAdicionado: {
+    backgroundColor: '#A8774C',
+  },
+  botaoAdicionarTexto: {
+    fontFamily: 'Poppins_500Medium',
+    fontSize: 11,
+    color: '#ffffff',
+  },
 });
