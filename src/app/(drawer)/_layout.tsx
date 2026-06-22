@@ -24,11 +24,12 @@ export default function DrawerLayout() {
         },
       }}
     >
-      <Drawer.Screen name="Home" options={{ title: 'Início' }} />
-      <Drawer.Screen name="NossoRefugio" options={{ title: 'Nosso Refúgio' }} />
-      <Drawer.Screen name="Cardapio" options={{ title: 'Cardápio' }} />
-      <Drawer.Screen name="BibliotecaDoGato" options={{ title: 'Biblioteca do Gato' }} />
-      <Drawer.Screen name="ItensSelecionados" options={{ title: 'Itens Selecionados' }} />
+      <Drawer.Screen name="Home/index" options={{ title: 'Início' }} />
+      <Drawer.Screen name="NossoRefugio/index" options={{ title: 'Nosso Refúgio' }} />
+      <Drawer.Screen name="Cardapio/index" options={{ title: 'Cardápio' }} />
+      <Drawer.Screen name="BibliotecaDoGato/index" options={{ title: 'Biblioteca do Gato' }} />
+      <Drawer.Screen name="BibliotecaDoGato/[categoria]" options={{ title: 'Livros Recomendados' }} />
+      <Drawer.Screen name="ItensSelecionados/index" options={{ title: 'Itens Selecionados' }} />
     </Drawer>
   );
 }

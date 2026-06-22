@@ -5,7 +5,7 @@ import { useFonts } from 'expo-font';
 import { PlayfairDisplay_700Bold, PlayfairDisplay_700Bold_Italic } from '@expo-google-fonts/playfair-display';
 import { Lato_400Regular, Lato_700Bold } from '@expo-google-fonts/lato';
 
-import { ProvedorSelecao } from '../context/ContextSelecao'; //*
+import { ProvedorSelecao } from '../context/ContextSelecao';
 
 SplashScreen.preventAutoHideAsync();
 

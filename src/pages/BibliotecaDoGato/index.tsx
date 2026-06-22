@@ -24,6 +24,7 @@ export default function BibliotecaDoGato() {
             headerShown: false,
             tabBarStyle: styles.tabBar,
             tabBarLabelStyle: styles.tabBarLabel,
+            tabBarLabelPosition: 'beside-icon',
             tabBarIcon: ({ color, size }) => {
               const icones: Record<string, keyof typeof Ionicons.glyphMap> = {
                 Destaque: 'star-outline',
@@ -45,10 +46,15 @@ export default function BibliotecaDoGato() {
             name="Destaque"
             component={Destaque}
             options={{
+              title: 'Destaque',
               tabBarActiveTintColor:
                 CORES_CATEGORIA.destaque.texto,
               tabBarActiveBackgroundColor:
                 CORES_CATEGORIA.destaque.bg,
+              tabBarInactiveTintColor: 
+                CORES_CATEGORIA.destaque.textoInativo,
+              tabBarInactiveBackgroundColor: 
+                CORES_CATEGORIA.destaque.bgInativo,
             }}
           />
 
@@ -56,10 +62,15 @@ export default function BibliotecaDoGato() {
             name="Categorias"
             component={Categorias}
             options={{
+              title: 'Categorias',
               tabBarActiveTintColor:
                 CORES_CATEGORIA.categorias.texto,
               tabBarActiveBackgroundColor:
                 CORES_CATEGORIA.categorias.bg,
+              tabBarInactiveTintColor:
+                CORES_CATEGORIA.categorias.textoInativo,
+              tabBarInactiveBackgroundColor: 
+                CORES_CATEGORIA.categorias.bgInativo,
             }}
           />
 
@@ -71,6 +82,10 @@ export default function BibliotecaDoGato() {
                 CORES_CATEGORIA.recomendados.texto,
               tabBarActiveBackgroundColor:
                 CORES_CATEGORIA.recomendados.bg,
+              tabBarInactiveTintColor: 
+                CORES_CATEGORIA.recomendados.textoInativo,
+              tabBarInactiveBackgroundColor: 
+                CORES_CATEGORIA.recomendados.bgInativo,
             }}
           />
         </Tab.Navigator>
